@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>JQuery Twitter Stream</title>
+	<link rel="stylesheet" href="style.css" type="text/css" media="all">
+</head>
+<body>
+	<div id="main-homepage-social" class="default-presentation">
+		<header>
+			<h1>Get Social</h1>
+			<span>Loading...</span>
+		</header>
+		
+		<section id="social-tweets"><div id="social-tweet-bottomFade"></div></section>
+	</div>
+	
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="JQuery.TwitterStream.js"></script>
+	<script>
+		window.onload = function(){
+			$("#main-homepage-social").twitterStream({
+                searchString: "#kentlife",
+				numOfTweets: 20,
+				resultsType: "mixed",
+				title: "Get Social",
+				blockedAccounts: [],
+				socialDOM: "#main-homepage-social"
+            });
+		}
+	</script>
+</body>
+</html>
