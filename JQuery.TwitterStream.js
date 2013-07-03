@@ -22,7 +22,7 @@
         
 			//Use AJAX to query the twitter 1.1 API for our search string
 			var request = $.ajax({
-			  url: "http://www.kentuniononline.co.uk/projects/twitter/twitterServer.php",
+			  url: "!!!!!YOURSERVERHERE!!!!!/twitterServer.php",
 			  type: "GET",
 			  data: {q : options.searchString.replace("#", "%23"), count: options.numOfTweets, include_entities: true, result_type: options.resultsType},
 			  dataType: "jsonp"
